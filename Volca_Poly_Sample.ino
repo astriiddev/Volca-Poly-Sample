@@ -31,7 +31,7 @@ int x = 175;
 
 void HandleNoteOn(byte channel, byte note, byte velocity) {
   ++x;                                                                  //increments CC 49 control channel by 1
-  HandleControlChange(x,49,note);                                       //sets CC 49 value equal with note
+  HandleControlChange(x,49,note+4);                                     //sets CC 49 value equal with note (adds 4 to match sample with middle C)
   ++ch;                                                                 //increments output MIDI channel
   MIDI.sendNoteOn(note, velocity, ch);
   
