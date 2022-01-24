@@ -6,7 +6,7 @@ The Korg Volca Sample 2 is a great low cost Sampler/Sequencer that's a major upg
 
 Luckily, the Volca Sample 2 added some new CC controls. CC control #49 chromatically changes the speed, and therefore pitch, of the sample that's being played. This Arduino code takes advantage of that CC control.
 
-To begin, parts 1-8 on the Volca Sample 2 must be set up to the same sample and with the same settings. The Arduino will cycle through these parts allowing you to play all 8 parts at once, so any major difference between the setup of each sample part will be apparent if they're not setup the same.
+To begin, parts 1-8 on the Volca Sample 2 must be set to the same sample and with the same settings. The Arduino will cycle through these parts allowing you to play all 8 parts at once, so any major difference between the setups of each sample part will be apparent if they're not setup the same.
 
 The Volca Sample only uses One Shot samples, meaning it only reads the MIDI note ON messages, but not the MIDI note OFF messages. This means that your sustain and release can only be set by the decay knobs on the Sample and Amp section of the Volca. Holding keys down for longer or shorter amounts of times unfortunately will not change the sustain length.
 
