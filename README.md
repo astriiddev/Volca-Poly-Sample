@@ -1,6 +1,8 @@
 # Volca-Poly-Sample
 Allows the Korg Volca Sample 2 to be played polyphonically via a MIDI controller
 
+NEW FOR 2.0: added CC mapping to control level, filter, attack, decay, etc for all channels with one control. See Korg's MIDI Implementation chart
+  for Volca Sample 2 for corresponding CC control: https://cdn.korg.com/us/support/download/files/c19d48a599794ff64a25b553e951c2fb.pdf
 
 The Korg Volca Sample 2 is a great low cost Sampler/Sequencer that's a major upgrade from its first iteration. Unfortunately, like its first iteration, there isn't any ability to play the Volca Sample live via a MIDI controller. Plugging a MIDI keyboard into the volca sample will only play back the sample's set pitch, no matter which key is pressed. On top of that, there's currently no support for Pajen's custom firmware that fixed this problem on the Sample 1. Using an Arduino UNO board, I decided to create a MIDI interface that not only allows one to play a Volca Sample 2 chromatically, but with 8-voice polyphony as well.
 
@@ -19,5 +21,3 @@ You must also have the Arduino MIDI Library installed: https://github.com/FortyS
 For a MIDI input schematic, see: https://hackaday.com/tag/6n137/
 
 For a MIDI output schematic, see:https://www.notesandvolts.com/2015/03/midi-for-arduino-build-midi-output.html
-
-Further down the line, I hope to add other CC controls across all channels (such as CC #42 so that one knob on the MIDI controller can change the LP filter on all 8 parts), but for now, please enjoy this project.
