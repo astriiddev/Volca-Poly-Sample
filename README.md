@@ -12,6 +12,15 @@ To begin, parts 1-8 on the Volca Sample 2 must be set to the same sample and wit
 
 The Volca Sample only uses One Shot samples, meaning it only reads the MIDI note ON messages, but not the MIDI note OFF messages. This means that your sustain and release can only be set by the decay knobs on the Sample and Amp section of the Volca. Holding keys down for longer or shorter amounts of times unfortunately will not change the sustain length.
 
+** from PD ** 
+ive been doing some coding in Reaper to achieve a pseudo midi off.
+what you do is issue a low (5-50) cc for the amplitude decay when note off is received, and interecpt the note on and issue decay cc = 127 just before output of the note on. I found this works quite well.
+i also issue a cc = 127 after a certain short period of inactivity (i like about 1 second), so that playing notes directly on the volca still works. 
+hope this idea can be useful. I'm also looking at doing a similar thing with mapping note on velocity to level cc in order to get some kind of touch sensitivity, but ive not managed it yet. 
+cheers
+
+
+
 Setting number 10 in the Global Settings must be set to Multi (LED off).
 
 Your MIDI controller must be outputing on MIDI channel 16.
